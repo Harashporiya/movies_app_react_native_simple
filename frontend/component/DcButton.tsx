@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { View,Text } from 'react-native'
 
-function MarvelButton() {
+function DcButton() {
     const navigation = useNavigation();
   return (
     <View>
@@ -11,4 +11,4 @@ function MarvelButton() {
   )
 }
 
-export default MarvelButton
+export default DcButton

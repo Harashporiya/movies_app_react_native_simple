@@ -2,6 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, ActivityIndicator, ScrollView, StyleSheet } from 'react-native';
 import axios from 'axios';
 
+interface movies{
+     item:string;
+     _id:string;
+     Image:string;
+     Hero_Name:string;
+     Real_Name:string;
+     Superpower:string;
+     First_Appearance:string;
+     Costume_Quirk:string;
+     Catchphrase:string;
+     Backstory:string;
+     Most_Useless_Moment:string;
+}
 function DcMovies() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +46,7 @@ function DcMovies() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      {data.map((item) => (
+      {data.map((item: movies) => (
         <View key={item._id} style={styles.item}>
           <Image source={{ uri: item.Image }} style={styles.image} />
           <Text style={styles.heroName}>{item.Hero_Name}</Text>

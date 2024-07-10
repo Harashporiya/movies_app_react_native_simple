@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Button, StyleSheet, Text, TextInput, View, Image } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { ScrollView } from 'react-native';
 
 const Signup = () => {
   const [username, setUsername] = useState<string>("");
@@ -33,6 +34,7 @@ const Signup = () => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Image
         source={{ uri: 'https://cdni.iconscout.com/illustration/premium/thumb/create-account-6333606-5230166.png?f=webp' }}
@@ -70,6 +72,7 @@ const Signup = () => {
         <Text onPress={() => navigation.navigate("LogIn")} style={{color:"blue",fontSize:20}} > LogIn</Text> 
       </Text>
     </View>
+    </ScrollView>
   );
 }
 
